@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frontendCSS.css">
+    <title>PDF ELIXIR</title>
+</head>
+<body>
+    <form id="dropFileForm" action="http://localhost/upload.php" method="post" onsubmit="uploadFiles(event)">
+        <input type="file" name="files[]" id="fileInput" multiple onchange="addFiles(event)">
+      
+        <label for="fileInput" id="fileLabel" ondragover="overrideDefault(event);fileHover();" ondragenter="overrideDefault(event);fileHover();" ondragleave="overrideDefault(event);fileHoverEnd();" ondrop="overrideDefault(event);fileHoverEnd();
+              addFiles(event);">
+          <i class="fa fa-download fa-5x"></i>
+          <br>
+          <span id="fileLabelText">
+            Choose a file or drag it here
+          </span>
+          <br>
+          <span id="uploadStatus"></span>
+        </label>
+      
+        <input type="submit" value="Convert To PDF" class="uploadButton">
+      </form>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+
+
+      <form id="dropFileForm" action="http://localhost/upload.php" method="post" onsubmit="uploadFiles(event)">
+        <input type="file" name="filesMerge1[]" id="fileInput" multiple onchange="addFiles(event)">
+      
+        <label for="fileInput" id="fileLabel" ondragover="overrideDefault(event);fileHover();" ondragenter="overrideDefault(event);fileHover();" ondragleave="overrideDefault(event);fileHoverEnd();" ondrop="overrideDefault(event);fileHoverEnd();
+              addFiles(event);">
+          <i class="fa fa-download fa-5x"></i>
+          <br>
+          <span id="fileLabelText">
+            Choose a first or drag it here
+          </span>
+          <br>
+          <span id="uploadStatus"></span>
+        </label>
+        <input type="file" name="filesMerge2[]" id="fileInput" multiple onchange="addFiles(event)">
+      
+        <label for="fileInput" id="fileLabel" ondragover="overrideDefault(event);fileHover();" ondragenter="overrideDefault(event);fileHover();" ondragleave="overrideDefault(event);fileHoverEnd();" ondrop="overrideDefault(event);fileHoverEnd();
+              addFiles(event);">
+          <i class="fa fa-download fa-5x"></i>
+          <br>
+          <span id="fileLabelText">
+            Choose second file or drag it here
+          </span>
+          <br>
+          <span id="uploadStatus"></span>
+        </label>
+        
+
+        
+
+      
+        <input type="submit" value="Merge PDFs" class="uploadButton">
+      </form>
+    
+
+
+<script src="fontendJs.js"></script>
+    
+</body>
+</html>
